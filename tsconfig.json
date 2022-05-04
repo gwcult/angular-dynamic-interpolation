@@ -2,6 +2,12 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "paths": {
+      "angular-dynamic-interpolation": [
+        "dist/angular-dynamic-interpolation/angular-dynamic-interpolation",
+        "dist/angular-dynamic-interpolation"
+      ]
+    },
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,

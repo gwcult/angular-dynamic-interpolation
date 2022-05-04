@@ -1,0 +1,10 @@
+<ng-container *ngFor="let tokenItem of tokens">
+    <ng-container *ngIf="tokenItem.type === 'replacement'; else notTemplateRef">
+        <ng-container *ngFor="let template of getReplacements(tokenItem.value)">
+            <ng-template [ngTemplateOutlet]="template"></ng-template>
+        </ng-container>
+    </ng-container>
+    <ng-template #notTemplateRef>
+        <div [outerHTML]="tokenItem.value"></div>
+    </ng-template>
+</ng-container>
